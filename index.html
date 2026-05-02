@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Siddharth Solanki | LOGTECH_FOUNDER</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#e1e2ec",
+                        "primary": "#adc6ff",
+                        "primary-container": "#4d8eff",
+                        "background": "#10131a",
+                        "inverse-on-surface": "#2e3038",
+                        "inverse-primary": "#005ac2",
+                        "on-primary-fixed-variant": "#004395",
+                        "surface-container-low": "#191b23",
+                        "surface-container": "#1d2027",
+                        "on-secondary-fixed": "#2c0051",
+                        "surface-dim": "#10131a",
+                        "on-secondary-fixed-variant": "#6900b3",
+                        "tertiary-fixed": "#6bff8f",
+                        "on-secondary-container": "#d6a9ff",
+                        "error-container": "#93000a",
+                        "surface": "#10131a",
+                        "error": "#ffb4ab",
+                        "on-background": "#e1e2ec",
+                        "secondary": "#ddb7ff",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#363941",
+                        "primary-fixed": "#d8e2ff",
+                        "secondary-fixed": "#f0dbff",
+                        "on-tertiary-container": "#003111",
+                        "on-secondary": "#490080",
+                        "surface-container-highest": "#32353c",
+                        "on-tertiary-fixed-variant": "#005321",
+                        "surface-container-lowest": "#0b0e15",
+                        "secondary-container": "#6f00be",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#002109",
+                        "on-primary-container": "#00285d",
+                        "on-surface-variant": "#c2c6d6",
+                        "tertiary": "#4ae176",
+                        "tertiary-container": "#00a74b",
+                        "primary-fixed-dim": "#adc6ff",
+                        "tertiary-fixed-dim": "#4ae176",
+                        "outline": "#8c909f",
+                        "on-tertiary": "#003915",
+                        "surface-tint": "#adc6ff",
+                        "outline-variant": "#424754",
+                        "inverse-surface": "#e1e2ec",
+                        "surface-container-high": "#272a31",
+                        "surface-variant": "#32353c",
+                        "on-primary": "#002e6a",
+                        "secondary-fixed-dim": "#ddb7ff",
+                        "on-primary-fixed": "#001a42"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "asymmetry-offset": "64px",
+                        "margin-desktop": "80px",
+                        "gutter": "32px",
+                        "margin-mobile": "24px",
+                        "unit": "8px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "label-small": ["Inter"],
+                        "headline-h1": ["Inter"],
+                        "headline-h2": ["Inter"],
+                        "caption-bold": ["Inter"],
+                        "display-xl": ["Inter"],
+                        "body-main": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-small": ["11px", { "lineHeight": "120%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-h1": ["clamp(2.5rem, 6vw, 64px)", { "lineHeight": "115%", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+                        "headline-h2": ["clamp(1.75rem, 5vw, 48px)", { "lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "caption-bold": ["12px", { "lineHeight": "140%", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "display-xl": ["clamp(3rem, 10vw, 120px)", { "lineHeight": "110%", "letterSpacing": "-0.04em", "fontWeight": "900" }],
+                        "body-main": ["18px", { "lineHeight": "160%", "letterSpacing": "0em", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #020617;
+            color: #e1e2ec;
+            overflow-x: hidden;
+        }
+
+        .glass {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (min-width: 768px) {
+            .asymmetric-right {
+                margin-right: 64px;
+            }
+
+            .asymmetric-left {
+                margin-left: 64px;
+            }
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #adc6ff 0%, #ddb7ff 50%, #4ae176 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .grid-bg {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .glow-blue {
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.15);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <style>
+        @keyframes highlight-text {
+            0% {
+                color: rgba(225, 226, 236, 0.2);
+            }
+
+            50% {
+                color: #ffffff;
+            }
+
+            100% {
+                color: rgba(225, 226, 236, 0.2);
+            }
+        }
+
+        .scroll-story-item {
+            view-timeline-name: --item-visible;
+            view-timeline-axis: block;
+            animation: highlight-text linear both;
+            animation-timeline: --item-visible;
+            animation-range: entry 20% exit 80%;
+        }
+
+        .sticky-story-container {
+            scroll-snap-type: y proximity;
+        }
+    </style>
+</head>
+
+<body class="font-body-main">
+    <!-- TopNavBar Shell -->
+    <nav
+        class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-5xl z-50 flex justify-between items-center px-4 md:px-6 py-2 bg-slate-950/60 backdrop-blur-xl rounded-full border border-white/10 shadow-[0_0_30px_rgba(59,130,246,0.1)]">
+        <div class="text-base md:text-lg font-black tracking-tighter text-white">SIDDHARTH SOLANKI</div>
+        <div class="hidden md:flex items-center gap-8">
+            <a class="font-inter tracking-tight uppercase text-[10px] font-bold text-slate-400 hover:text-white hover:scale-105 transition-all"
+                href="#portfolio">Portfolio</a>
+            <a class="font-inter tracking-tight uppercase text-[10px] font-bold text-slate-400 hover:text-white hover:scale-105 transition-all"
+                href="#brain">Brain</a>
+            <a class="font-inter tracking-tight uppercase text-[10px] font-bold text-slate-400 hover:text-white hover:scale-105 transition-all"
+                href="#execution">Execution</a>
+            <a class="font-inter tracking-tight uppercase text-[10px] font-bold text-slate-400 hover:text-white hover:scale-105 transition-all"
+                href="#connect">Connect</a>
+        </div>
+        <button
+            class="bg-primary-container text-on-primary-container px-4 py-1.5 rounded-full text-label-small font-bold hover:scale-105 transition-all">Get
+            in Touch</button>
+    </nav>
+    <!-- Hero Section -->
+    <section
+        class="relative min-h-screen flex flex-col items-center justify-center pt-24 grid-bg px-margin-mobile md:px-margin-desktop overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-background pointer-events-none"></div>
+        <div class="relative z-10 text-center max-w-5xl">
+            <h1 class="font-display-xl text-display-xl text-gradient leading-none mb-6">Siddharth Solanki</h1>
+            <p class="font-headline-h2 text-headline-h2 text-on-surface max-w-3xl mx-auto opacity-80">
+                I build systems that actually work in the real world.
+            </p>
+        </div>
+        <!-- Metrics Subtle Flex -->
+        <div class="relative z-10 grid grid-cols-2 md:grid-cols-3 gap-12 mt-24 w-full max-w-4xl">
+            <div class="flex flex-col items-center">
+                <span class="font-headline-h1 text-headline-h1 text-primary">500+</span>
+                <span class="font-label-small text-label-small text-outline uppercase tracking-widest">Active Retail
+                    Stores</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="font-headline-h1 text-headline-h1 text-tertiary">16+</span>
+                <span class="font-label-small text-label-small text-outline uppercase tracking-widest">Distribution
+                    Centers</span>
+            </div>
+            <div class="col-span-2 md:col-span-1 flex flex-col items-center">
+                <span class="font-headline-h1 text-headline-h1 text-secondary">40%</span>
+                <span
+                    class="font-label-small text-label-small text-outline uppercase tracking-widest text-center">Efficiency
+                    Gains</span>
+            </div>
+        </div>
+    </section>
+    <!-- Scroll Story (Sticky Simulation) -->
+    <section class="relative bg-background py-32 px-margin-mobile md:px-margin-desktop sticky-story-container">
+        <div class="sticky top-1/3 max-w-6xl mx-auto space-y-24">
+            <div class="group">
+                <h3
+                    class="font-headline-h2 text-headline-h2 text-on-surface transition-opacity duration-500 scroll-story-item">
+                    I don’t just build software.</h3>
+            </div>
+            <div class="group">
+                <h3
+                    class="font-headline-h2 text-headline-h2 text-on-surface transition-opacity duration-500 scroll-story-item">
+                    I build systems that work on highways.</h3>
+            </div>
+            <div class="group">
+                <h3
+                    class="font-headline-h2 text-headline-h2 text-on-surface transition-opacity duration-500 scroll-story-item">
+                    I go on delivery trips with drivers.</h3>
+            </div>
+            <div class="group">
+                <h3
+                    class="font-headline-h2 text-headline-h2 text-on-surface transition-opacity duration-500 scroll-story-item">
+                    I fix real problems and scale them.</h3>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="py-32 bg-surface-container-lowest relative overflow-hidden" id="execution">
+        <div
+            class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row gap-gutter items-center">
+            <div class="w-full md:w-1/2 asymmetric-left">
+                <div class="glass p-8 rounded-xl glow-blue relative group overflow-hidden">
+                    <img alt="Portrait"
+                        class="w-full h-[400px] md:h-[600px] object-cover rounded-lg filter grayscale hover:grayscale-0 transition-all duration-700"
+                        data-alt="A cinematic, low-key portrait of Siddharth Solanki, a professional in his early 30s with a sharp, determined gaze. He is wearing a dark, minimalist technical jacket against a background of blurred warehouse lights and terminal interfaces. The lighting is moody with deep shadows and soft blue accents, reflecting a sophisticated tech-founder persona. The overall image has a high-contrast, professional photography aesthetic that feels authentic and raw."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTfdLNS4KjOd2plZanben8ryq1psiBT3c7vddZDRyFN6I-zQ0iURYegc5-Yut_q-yg3fti5BofXK5iLPCw-NkxXyuN-QxwtMf2nooip6oL7-0XD-qEHGksstACVeALIFl1JaZqnLilzFfxyU6xi_sESKemSOuThB9BhvxXZODak0x1VVuen0j3KaOZamwMKT6pkOd5FP7BXNexWaHTIkZOWLtNICnUxoxojKhlTM3xkPDI5HW0bsrpCOO08u7dTCUFYRbUedRhkEse" />
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 space-y-8">
+                <h2 class="font-headline-h1 text-headline-h1 text-primary">Raw execution.</h2>
+                <p class="font-body-main text-body-main text-on-surface-variant leading-relaxed max-w-xl">
+                    I don't design systems in isolation. Most logistics tech fails because it's built in a glass office.
+                    I work with drivers on the 3 AM shifts and in warehouses at 45°C to build systems that actually
+                    perform under pressure.
+                </p>
+                <p class="font-body-main text-body-main text-on-surface-variant leading-relaxed max-w-xl">
+                    It's not about the code; it's about the delivery reaching the destination when the world says it's
+                    impossible.
+                </p>
+                <div class="pt-8">
+                    <button
+                        class="bg-primary text-on-primary px-8 py-4 rounded-lg font-caption-bold text-caption-bold uppercase tracking-widest hover:scale-105 transition-all">Read
+                        the full story</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Work: Storytelling Sections -->
+    <section class="relative bg-background py-32 px-margin-mobile md:px-margin-desktop sticky-story-container"
+        id="portfolio">
+        <div class="max-w-7xl mx-auto space-y-48">
+            <!-- UAE HORECA -->
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-3/5 order-2 md:order-1">
+                    <div class="glass aspect-video rounded-xl overflow-hidden group">
+                        <img alt="UAE Logistics"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                            data-alt="An expansive view of a hyper-modern distribution center in Dubai at dusk, featuring a fleet of clean, white delivery trucks lined up at loading docks. The sky is a deep indigo, contrasting with the vibrant amber and blue lights of the warehouse. The scene captures the high-intensity, precision-driven world of UAE food logistics. The lighting is crisp, and the composition uses leading lines to emphasize scale and efficiency."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6PbtGY9cmZAreWs10CThz7rGZvmuAJs01dQatZLGSm9kidbbcv26PWM0t7bIRSlI5wfrqwzuIRLhLpKcimKzxBR36U5hMVvvGj5v5eQascYc9adTpYwbNbkgbZ5dtQv6Wg48QuvYn6FGdJoRIDjDoZ6SoahOw-Gq1GtZKsU-IKkH_JqrydsXiz0H-GxNxsz5IO_ZoYXeJlCmOdkEkO_zt29gpKxbS8h1NHe6QztMNyh-rBDvm8U3nfEeKtfMnaoKA6z5ykvsYmFMN" />
+                    </div>
+                </div>
+                <div class="w-full md:w-2/5 order-1 md:order-2 space-y-6">
+                    <span
+                        class="font-caption-bold text-caption-bold text-tertiary-fixed-dim uppercase tracking-widest">Case
+                        Study: UAE HORECA</span>
+                    <h3 class="font-headline-h2 text-headline-h2 text-on-surface scroll-story-item">The 90-Minute
+                        Mandate</h3>
+                    <p class="text-body-main text-on-surface-variant">Built a hyper-local delivery engine for 2000+
+                        restaurants. We didn't just optimize routes; we re-engineered the entire warehouse pick-path to
+                        shave 12 minutes off every order. The result? 40% more deliveries with the same fleet.</p>
+                </div>
+            </div>
+            <!-- India Retail -->
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-2/5 space-y-6">
+                    <span
+                        class="font-caption-bold text-caption-bold text-secondary-fixed-dim uppercase tracking-widest">Scale:
+                        India Retail</span>
+                    <h3 class="font-headline-h2 text-headline-h2 text-on-surface scroll-story-item">500+ Stores, Zero
+                        Gaps</h3>
+                    <p class="text-body-main text-on-surface-variant">Managing inventory across 500+ outlets in India
+                        isn't a software problem; it's a psychology problem. We built a 'Driver-First' inventory app
+                        that reduced leakage by 22% simply by making it usable with one thumb in heavy traffic.</p>
+                </div>
+                <div class="w-full md:w-3/5">
+                    <div class="glass aspect-video rounded-xl overflow-hidden group">
+                        <img alt="Retail Operations"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                            data-alt="A bustling, high-energy retail logistics environment in a major Indian city, showing workers efficiently scanning and sorting packages under bright industrial lighting. The aesthetic is raw and focused on action, with a color palette of deep slates and safety oranges. The image captures the chaotic yet controlled nature of large-scale retail distribution. The focus is sharp on the technology being used in the foreground."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4jVGDoNMJ54qUbgr2eLmJD5WwleyWTYdkI5z8DkGOzIawA5Fm-RkceKnd0E1OnurR8SDgLvVwQiCCp33NwzBG0d_DaDyKoFtknkdxOVcLJWfvTHyXWz4-pLwS6aMZ5jRqDFBNiuDlkDDXgbrlF3OMoZ1voVFXmExD5O9C97nmGuyGJvelqmAiclwrKkUpJpgZhAsE59_QLaX24LgT-NSybPCO7z_9a_4BQHHWMs3ZDCUOJfVa7uOYulsiNYqge3vodY_scKaQ5-xu" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Brain Section: Bento Grid -->
+    <section class="py-32 bg-surface-container" id="brain">
+        <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="mb-16">
+                <h2 class="font-headline-h1 text-headline-h1 text-on-surface">The Brain.</h2>
+                <p class="text-on-surface-variant mt-4">Unfiltered observations on supply chain, execution, and tech.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div
+                    class="md:col-span-2 glass p-10 rounded-2xl flex flex-col justify-between hover:border-primary/50 transition-colors">
+                    <p class="text-headline-h2 font-headline-h2 text-primary leading-tight">"Efficiency isn't about
+                        moving faster; it's about stopping fewer times."</p>
+                    <div class="mt-12 flex justify-between items-end">
+                        <span class="text-label-small font-label-small text-outline">LOGTECH THOUGHTS</span>
+                        <span class="material-symbols-outlined text-primary">arrow_outward</span>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-2xl bg-gradient-to-br from-secondary-container/20 to-transparent">
+                    <span class="material-symbols-outlined text-secondary mb-4">terminal</span>
+                    <h4 class="font-bold mb-4">Why SaaS fails Logistics</h4>
+                    <p class="text-body-main text-on-surface-variant text-sm">Most SaaS products assume a perfect world.
+                        Logistics is 90% edge cases. Build for the edge, and the happy path takes care of itself.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl flex flex-col justify-center items-center text-center">
+                    <span class="text-headline-h2 font-headline-h2 text-tertiary">40%</span>
+                    <p class="text-label-small text-outline mt-2 uppercase">Reduction in Driver Fatigue</p>
+                </div>
+                <div class="md:col-span-2 glass p-10 rounded-2xl flex gap-8 items-center">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-xl mb-2">The 3 AM Test</h4>
+                        <p class="text-on-surface-variant">If your UI doesn't work for a driver who's been awake for 14
+                            hours, your UI doesn't work. Period.</p>
+                    </div>
+                    <div
+                        class="w-24 h-24 rounded-full border-4 border-primary-container/30 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-3xl">dark_mode</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Real Feedback -->
+    <section class="py-32 px-margin-mobile md:px-margin-desktop overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-headline-h2 text-headline-h2 mb-16 text-center">Raw Feedback.</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="glass p-8 rounded-xl max-w-sm rotate-2 hover:rotate-0 transition-transform">
+                    <p class="italic text-on-surface">"Siddharth is the only CTO I know who actually knows the names of
+                        our delivery drivers. It shows in the product."</p>
+                    <div class="mt-6 flex items-center gap-4">
+                        <div class="w-10 h-10 bg-primary rounded-full"></div>
+                        <div>
+                            <p class="text-sm font-bold">Operations Lead</p>
+                            <p class="text-xs text-outline">UAE Enterprise</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-xl max-w-sm -rotate-1 hover:rotate-0 transition-transform">
+                    <p class="italic text-on-surface">"The retail rollout was insane. 500 stores in 6 months shouldn't
+                        have been possible, but the system just... held up."</p>
+                    <div class="mt-6 flex items-center gap-4">
+                        <div class="w-10 h-10 bg-secondary rounded-full"></div>
+                        <div>
+                            <p class="text-sm font-bold">Regional Manager</p>
+                            <p class="text-xs text-outline">India Retail</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-xl max-w-sm rotate-3 hover:rotate-0 transition-transform">
+                    <p class="italic text-on-surface">"No corporate fluff. Just systems that work when everything else
+                        is breaking."</p>
+                    <div class="mt-6 flex items-center gap-4">
+                        <div class="w-10 h-10 bg-tertiary rounded-full"></div>
+                        <div>
+                            <p class="text-sm font-bold">Tech Partner</p>
+                            <p class="text-xs text-outline">Logistics Firm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Human Section -->
+    <section class="py-32 bg-surface-container-high">
+        <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+                <div class="space-y-8">
+                    <h3 class="font-headline-h2 text-headline-h2 text-primary">Things I Believe.</h3>
+                    <ul class="space-y-6">
+                        <li class="flex gap-4">
+                            <span class="text-primary font-bold">01</span>
+                            <p class="text-on-surface">Speed is a feature, but reliability is the product.</p>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="text-primary font-bold">02</span>
+                            <p class="text-on-surface">If you can't explain it to a driver, it's too complex.</p>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="text-primary font-bold">03</span>
+                            <p class="text-on-surface">Data is useless without context from the ground floor.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-8">
+                    <h3 class="font-headline-h2 text-headline-h2 text-tertiary">What I'm Exploring.</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span
+                            class="px-6 py-3 rounded-full border border-outline/30 font-caption-bold text-caption-bold">Autonomous
+                            Last-Mile</span>
+                        <span
+                            class="px-6 py-3 rounded-full border border-outline/30 font-caption-bold text-caption-bold">Edge
+                            Computing in Warehouses</span>
+                        <span
+                            class="px-6 py-3 rounded-full border border-outline/30 font-caption-bold text-caption-bold">Sustainable
+                            Cold Chain</span>
+                        <span
+                            class="px-6 py-3 rounded-full border border-outline/30 font-caption-bold text-caption-bold">Interoperable
+                            Logistics Protocols</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Connect Section -->
+    <section class="py-32 bg-background relative overflow-hidden" id="connect">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-surface-container-lowest pointer-events-none">
+        </div>
+        <div class="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-center">
+            <h2 class="font-headline-h1 text-headline-h1 text-on-surface mb-6">Let's build.</h2>
+            <p class="font-body-main text-on-surface-variant max-w-2xl mx-auto mb-16">
+                Looking for a tech partner who understands the ground reality? Reach out directly.
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-8">
+                <!-- Email Card -->
+                <a href="mailto:siddharth@example.com"
+                    class="glass p-8 rounded-2xl flex flex-col items-center group hover:border-primary/50 transition-all hover:-translate-y-2 w-full md:w-1/2">
+                    <span
+                        class="material-symbols-outlined text-4xl text-primary mb-4 group-hover:scale-110 transition-transform">mail</span>
+                    <span class="font-caption-bold text-outline uppercase tracking-widest mb-2">Email</span>
+                    <span
+                        class="font-headline-h2 text-2xl md:text-3xl text-on-surface group-hover:text-primary transition-colors">siddharth@example.com</span>
+                </a>
+
+                <!-- Phone Card -->
+                <a href="tel:+919876543210"
+                    class="glass p-8 rounded-2xl flex flex-col items-center group hover:border-tertiary/50 transition-all hover:-translate-y-2 w-full md:w-1/2">
+                    <span
+                        class="material-symbols-outlined text-4xl text-tertiary mb-4 group-hover:scale-110 transition-transform">call</span>
+                    <span class="font-caption-bold text-outline uppercase tracking-widest mb-2">Phone</span>
+                    <span
+                        class="font-headline-h2 text-2xl md:text-3xl text-on-surface group-hover:text-tertiary transition-colors">+91
+                        98765 43210</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-slate-950 w-full py-12 px-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <div class="text-sm font-bold text-slate-200 mb-2">Siddharth Solanki</div>
+                <div class="font-inter text-xs text-slate-500">© 2024 Built for the Digital Age. All rights reserved.
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4 md:gap-8">
+                <a class="font-inter text-xs text-slate-500 hover:text-blue-400 transition-colors" href="#">LinkedIn</a>
+                <a class="font-inter text-xs text-slate-500 hover:text-blue-400 transition-colors" href="#">GitHub</a>
+                <a class="font-inter text-xs text-slate-500 hover:text-blue-400 transition-colors" href="#">Read.cv</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-xs text-slate-500 uppercase tracking-widest font-bold">Status:</span>
+                <span
+                    class="flex items-center gap-2 text-xs text-tertiary font-bold bg-tertiary/10 px-3 py-1 rounded-full">
+                    <span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+                    Available for hard problems
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section[id], footer[id]");
+            const navLinks = document.querySelectorAll("nav a[href^='#']");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('text-blue-400');
+                            link.classList.add('text-slate-400');
+                            if (link.getAttribute('href') === `#${entry.target.id}`) {
+                                link.classList.remove('text-slate-400');
+                                link.classList.add('text-blue-400');
+                            }
+                        });
+                    }
+                });
+            }, {
+                rootMargin: '-40% 0px -40% 0px'
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>
